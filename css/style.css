@@ -1,23 +1,223 @@
-/* Styles for Mobile Site */
+/* General Body and Layout */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #F4F4F4; 
+    color: #33322C; 
+}
 
-/* Header & Hero */
+h1, h2, h3, p {
+    margin: 0;
+}
 
-/* Projects */
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #645199; 
+    position: relative;
+    flex-wrap: wrap;
+}
 
-/* Reviews */
+header h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    margin-left: 20px;
+    text-align: center;
+    flex-basis: 100%; 
+}
 
-/* Footer */
+/* Logo Container */
+.logo-container {
+    display: flex;
+    justify-content: center; 
+    width: 100%;
+}
+
+/* Logo Image */
+.logo {
+    width: 100%;
+    max-width: 180px;  
+    height: auto;
+    display: block; 
+}
 
 
-/* Media state for Desktop site */
+@media (max-width: 768px) {
+    .logo {
+        max-width: 150px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        max-width: 120px;
+    }
+}
+
+header h1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/* Projects Section */
+#projects {
+    padding: 40px 20px;
+    background-color: #FFF;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; 
+}
+
+#projects h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #683EDA; 
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/* Each project */
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFF;
+    padding: 20px;
+    width: 30%; 
+    box-sizing: border-box;
+    border-radius: 0; 
+}
+
+.project img {
+    width: 100%;
+    max-width: 100%; 
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.project .description h3 {
+    font-size: 24px;
+    color: #4B4659; 
+    margin-bottom: 10px;
+}
+
+.project .description p {
+    font-size: 16px;
+    color: #33322C; 
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+    .project {
+        width: 45%; 
+    }
+}
+
+@media (max-width: 480px) {
+    .project {
+        width: 100%; 
+    }
+}
+
+/* Reviews Section */
+#reviews {
+    padding: 40px 20px;
+    background-color: #E9E9E9;
+}
+
+#reviews h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #645199; 
+    margin-bottom: 30px;
+}
+
+.review {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #FFF;
+    border-radius: 10px;
+}
+
+.review .name {
+    font-weight: bold;
+    font-size: 18px;
+    color: #4B4659;
+}
+
+.review .title {
+    font-style: italic;
+    color: #645199;
+    margin: 5px 0;
+}
+
+.review .rating {
+    color: #D9CC3D; 
+    margin-bottom: 10px;
+}
+
+.review .content {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #33322C;
+}
+
+/* Footer Section */
+footer {
+    background-color: #33322C;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    border: #33322C;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #D9CC3D; 
+    margin: 0 5px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries for Larger Screens */
 @media (min-width: 1000px) {
+    /* Header */
+    header h1 {
+        font-size: 50px;
+    }
 
-    /* Header & Hero */
+    /* Projects Section */
+    #projects {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
 
-    /* Projects */
+    .project {
+        flex: 0 0 30%;
+        margin: 20px;
+    }
 
-    /* Reviews */
+    /* Reviews Section */
+    #reviews {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 
-    /* Footer */
-
+    .review {
+        flex: 0 0 30%;
+    }
 }
